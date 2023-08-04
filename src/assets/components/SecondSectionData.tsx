@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import user from '../images/user.png'
 import locations from '../images/location.png'
 import server from '../images/server.png'
