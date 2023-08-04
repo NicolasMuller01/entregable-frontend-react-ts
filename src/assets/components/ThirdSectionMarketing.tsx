@@ -1,4 +1,3 @@
-import React from 'react'
 import illustration2 from '../images/Illustration 2.png'
 import check from '../images/Group 1120.png'
 import '../Styles/thirdSectionMarketing.css'
