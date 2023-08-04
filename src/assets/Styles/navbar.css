@@ -1,0 +1,31 @@
+
+
+.SignUp{
+    width: 150px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    border: 1px solid #F53855;
+    color: #F53855;
+    margin-left: 5px;
+}
+
+.SignIn{
+    color: #0B132A;
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 5px;
+}
+
+li{
+    color: #4F5665;
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px;
+}

@@ -1,0 +1,15 @@
+.box-data-background{
+    flex-shrink: 0;
+    border-radius: 40px;
+    backdrop-filter: blur(27px);
+    background-color: rgb(148, 148, 148);
+    box-shadow: 0 10px 15px rgba(201, 201, 201, 0.2);
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+}
+
+.border-custom-gray {
+    border-color: #EEEFF2;
+  }
