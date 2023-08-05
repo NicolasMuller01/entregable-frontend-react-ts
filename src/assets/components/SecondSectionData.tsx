@@ -13,8 +13,8 @@ export const SecondSectionData = () => {
 
 
   return (
-    <section className='container mx-auto h-36 lg:h-48 flex justify-center'>
-        <div className="box-data-background shadow-2xl rounded-lg mx-auto w-full flex flex-row justify-evenly place-items-center align-middle max-w-5xl">
+    <section className='container mx-auto h-36 lg:h-48 flex justify-center mb-20'>
+        <div className="box-data-background shadow-xl rounded-lg mx-auto w-full flex flex-row justify-evenly place-items-center align-middle max-w-5xl">
         {images.map((img, index) => (
           <div className="box flex flex-row align-middle items-center justify-align" key={index}>
             {index === 1 && (

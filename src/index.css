@@ -13,8 +13,7 @@ body,
   width: 100%;
 }
 
-body{
-  max-width: 1600px; /* Establecer el ancho máximo de la clase container a 960px */
+body{/* Establecer el ancho máximo de la clase container a 960px */
   margin: 0 auto; 
 }
 

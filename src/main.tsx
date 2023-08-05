@@ -5,6 +5,7 @@ import { Navbar } from './assets/components/Navbar'
 import { FirstSection } from './assets/components/FirstSection'
 import {SecondSectionData} from './assets/components/SecondSectionData'
 import { ThirdSectionMarketing } from './assets/components/ThirdSectionMarketing'
+import { FourthSectionPlans } from './assets/components/FourthSectionPlans'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -13,5 +14,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <FirstSection />
     <SecondSectionData/>
     <ThirdSectionMarketing/>
+    <FourthSectionPlans/>
   </React.StrictMode>,
 )

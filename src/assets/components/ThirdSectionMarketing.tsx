@@ -12,18 +12,18 @@ const propuses = [
 ]
 
   return (
-    <section>
-        <div className="box container mx-auto">
-            <div className="logo">
+    <section className='mb-20 max-w-5xl mx-auto container'>
+        <div className="box container mx-auto md:flex-row flex align-middle place-items-end">
+            <div className="logo hidden md:block">
                 <img src={illustration2} alt='illustration2'></img>
             </div>
-            <div className="text">
-                <h3 className='text-2xl m-0 lg:text-3xl'><b>We Provide Many Features You Can Use</b></h3>
-                <p className='left-side-p mt-5'>You can explore the features that we provide with fun and have their own functions each feature.</p>
+            <div className="text flex flex-col mx-auto justify-center">
+                <h3 className='text-2xl m-0 lg:text-3xl'><b>We Provide Many <br></br>Features You Can Use</b></h3>
+                <p className='left-side-p mt-8 lg:mt-8 md:mt-4'>You can explore the features that we provide with fun and <br></br> have their own functions each feature.</p>
                 {
                   propuses.map((p)=>(
-                    <div>
-                    <img src={p.logo}></img>
+                    <div className='flex flex-row mt-6 lg:mt-6 md:mt-2'>
+                    <img className='pr-2' src={p.logo}></img>
                     <p>{p.text}</p>
                     </div>
                   ))
