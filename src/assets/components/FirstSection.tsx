@@ -1,4 +1,3 @@
-
 import illustration1 from '../images/Illustration 1.png'
 import "../Styles/principalSection.css"
 
