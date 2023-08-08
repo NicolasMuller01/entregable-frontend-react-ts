@@ -23,7 +23,7 @@ export const Navbar = () => {
 
   return (
     <nav className='px-10 container mx-auto max-w-7xl'>
-      <div className="mb-20 navbar flex flex-col lg:flex lg:flex-row lg:justify-around lg:align-middle h-16 lg:items-center">
+      <div className={`${burguerMenuValidator ? "h-96" : ""} mb-20 navbar flex flex-col lg:flex lg:flex-row lg:justify-around lg:align-middle h-16 lg:items-center`}>
       {/* Left side*/}
         <div className='flex justify-between lg:mx-auto'>
           <div className='navbar-logo-left-box'>
@@ -34,7 +34,7 @@ export const Navbar = () => {
           </button>
         </div>
       {/* Middle side*/}
-        <div className={`${burguerMenuValidator ? "" : "hidden"} lg:flex lg:flex-row navbar-middle-box mx-auto lg:justify-between`}>
+        <div className={`${burguerMenuValidator ? "mt-10" : "hidden"} lg:flex lg:flex-row navbar-middle-box mx-auto lg:justify-between`}>
           <ul className='text-center lg:flex lg:flex-row lg:align-middle'>
             {
               link.map(( link )=>(

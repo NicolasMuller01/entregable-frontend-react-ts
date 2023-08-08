@@ -5,7 +5,8 @@ import standard from "../images/Standard.png"
 import premium from "../images/Premium.png"
 import check from '../images/jam_check.png'
 import { FifthSection } from './FifthSection'
-import { Carousel } from './carousel/Carousel'
+import { SixthSectionCarousel } from './SixthSectionCarousel'
+import { SeventhSectionForm } from './SeventhSectionForm'
 
 export const FourthSectionPlans = () => {
 
@@ -23,7 +24,7 @@ export const FourthSectionPlans = () => {
   return (
     <section className='section-plans mx-auto conteiner mb-20'>
       <div className="div-box-back section-plans mx-auto conteiner max-w-7xl pt-20">
-        <div className="top-text flex flex-col justify-center items-center mb-16">
+          <div className="top-text flex flex-col justify-center items-center mb-16">
               <h3 className='text-center text-slate-900 text-4xl font-medium leading-10 mb-5'>Choose Your Plan</h3>
               <p className='text-center text-gray-600 text-base font-normal leading-loose'>Let's choose the package that is best for you and explore it happily and <br /> cheerfully.</p>
           </div>
@@ -34,7 +35,8 @@ export const FourthSectionPlans = () => {
           </div>
       </div>
       <FifthSection/>
-      <Carousel/>
+      <SixthSectionCarousel/>
+      <SeventhSectionForm/>
     </section>
   )
 }
