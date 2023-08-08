@@ -29,7 +29,8 @@ export const SeventhSectionForm = () => {
         email: '',
         message: '',
       })
-  };
+      alert('Form Sent Correctly, We will contact you soon...')
+      };
 
   return (
     <section>
@@ -37,11 +38,11 @@ export const SeventhSectionForm = () => {
         <h3 className="text-center text-slate-900 text-4xl font-medium leading-10 mb-5">Let's Talk</h3>
       </div>
       <div className="form-box flex justify-center flex-col items-center align-middle">
-        <form className="flex flex-col" onSubmit={handleSubmit}>
+        <form className="flex flex-col justify-center items-center" onSubmit={handleSubmit}>
           <input
             onChange={handleInputChange}
             value={formData.name}
-            className="h-16 mb-5 drop-shadow-lg"
+            className="sm:w-96 w-64 h-16 mb-5 drop-shadow-lg mx-auto"
             type="text"
             name="name"
             placeholder="Name"
@@ -49,7 +50,7 @@ export const SeventhSectionForm = () => {
           <input
             onChange={handleInputChange}
             value={formData.email}
-            className="h-16 mb-5 drop-shadow-lg"
+            className="sm:w-96 w-64 h-16 mb-5 drop-shadow-lg"
             type="email"
             name="email"
             placeholder="Email"
@@ -57,7 +58,7 @@ export const SeventhSectionForm = () => {
           <textarea
             onChange={handleInputChange}
             value={formData.message}
-            className="mb-5 resize-none drop-shadow-lg"
+            className="w-64 sm:w-96 mb-5 resize-none drop-shadow-lg"
             rows={10}
             cols={50}
             name="message"
