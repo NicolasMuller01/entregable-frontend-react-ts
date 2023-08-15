@@ -22,7 +22,7 @@ interface Review {
                   <img src={reviews.image} alt="face" />
               </div>
               <div className="middle-top-box items-start pl-3">
-                  <p>{reviews.name}</p>
+                  <p><b>{reviews.name}</b></p>
                   <p>{reviews.location}</p>
               </div>
             </div>
