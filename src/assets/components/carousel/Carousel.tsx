@@ -1,7 +1,4 @@
 import { OpinionsComponent } from "./OpinionsComponent"
-import p1 from '../../images/profiles/p1.png'
-import p2 from '../../images/profiles/p2.png'
-import p3 from '../../images/profiles/p3.png'
 import arrowRight from '../../images/svg/arrow-right.svg'
 import arrowLeft from '../../images/svg/arrow-left.svg'
 import { useEffect, useState } from "react"
