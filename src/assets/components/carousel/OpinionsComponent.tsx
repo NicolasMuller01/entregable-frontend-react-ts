@@ -1,14 +1,12 @@
 import star from '../../images/ant-design_star-filled.png'
 
-interface Review {
-    image: string;
-    name: string;
-    location: string;
-    rate: string;
-    desc: string;
+type Review = {
+    avatar : string,
+    fullName : string,
+    testimonial : string
   }
   
-  interface ReviewProps {
+  type ReviewProps ={
     reviews: Review;
     border?: string;
   }
@@ -19,20 +17,20 @@ interface Review {
         <div className="top-box flex flex-row justify-between items-center pb-3">
             <div className="box-left-and-middle flex flex-row">
               <div className="left-box-top items-start">
-                  <img src={reviews.image} alt="face" />
+                  <img className='w-12 h-12 rounded-full object-cover' src={reviews.avatar} alt="face" />
               </div>
               <div className="middle-top-box items-start pl-3">
-                  <p><b>{reviews.name}</b></p>
-                  <p>{reviews.location}</p>
+                  <p><b>{reviews.fullName}</b></p>
+                  <p>Crombie</p>
               </div>
             </div>
             <div className="right-box-top flex flex-row items-center">
-                <p className=' text-slate-900 text-base font-normal leading-loose'>{reviews.rate}</p>
+                <p className=' text-slate-900 text-base font-normal leading-loose'>4.5</p>
                 <img className='w-3 h-3 relative flex-col justify-start items-start inline-flex' src={star} alt="star" />
             </div>
         </div>
         <div className="bottom-bottom items-center align-middle h-fit">
-            <p>{reviews.desc}</p>
+            <p>{reviews.testimonial}</p>
         </div>
 
     </div>

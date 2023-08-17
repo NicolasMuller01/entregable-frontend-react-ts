@@ -4,43 +4,76 @@ import p2 from '../../images/profiles/p2.png'
 import p3 from '../../images/profiles/p3.png'
 import arrowRight from '../../images/svg/arrow-right.svg'
 import arrowLeft from '../../images/svg/arrow-left.svg'
-import { useState } from "react"
+import { useEffect, useState } from "react"
+
+type Testimonials = {
+  avatar: string,
+  fullName: string,
+  testimonial: string
+}
+
 
 export const Carousel = () => {
 
   const [counter, setCounter] = useState(0)
 
-  const reviews = [
-    {image: p1, name: 'Viezh Robert', location:'Warsaw, Poland', rate: '4.5', desc:'“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”.'},
-    {image: p2, name: 'Yessica Christy', location:'Shanxi, China', rate: '4.5', desc:'“I like it because I like to travel far and still can connect with high speed.”.'},
-    {image: p3, name:'Kim Young Jou', location: 'Seoul, South Korea', rate: '4.5' ,desc: '“This is very unusual for my business that currently requires a virtual private network that has high security.”.'}
-  ]
+  const [testimonials, setTestimonials] = useState<Testimonials[]>([]);
+
+
+
+    useEffect(() => {
+      fetch("https://6xrb5goi1l.execute-api.us-east-1.amazonaws.com/api/testimonial")
+        .then((response) => {
+          response.json().then((result) => {
+            setTestimonials(result)
+          });
+        })
+        .catch((error) => {
+          console.log(error.message);
+        })
+        .finally(() => {
+          console.log(testimonials);  
+        });
+    }, []);
+
 
   return (
     <div className="my-20">
+      <div className="reviews-box box-carousel flex flex-row lg:justify-between justify-center">
       {
-        counter == 0 ? 
-        <div className="reviews-box box-carousel flex flex-row lg:justify-between justify-center">
-          <OpinionsComponent border={'w-96 h-56 bg-white rounded-lg border border-red-500 mx-0'} reviews={reviews[0]}/>
-          <OpinionsComponent border={'hidden lg:block w-96 h-56 rounded-lg border border-neutral-200 mx-0'} reviews={reviews[1]}/>
-          <OpinionsComponent border={'hidden lg:block w-96 h-56 rounded-lg border border-neutral-200 mx-0'} reviews={reviews[2]}/>
-        </div>
-        : counter == 1 
-        ? 
-        <div className="reviews-box box-carousel flex flex-row lg:justify-between justify-center">
-          <OpinionsComponent border={'w-96 h-56 bg-white rounded-lg border border-red-500 mx-0'} reviews={reviews[1]}/>
-          <OpinionsComponent border={'hidden lg:block w-96 h-56 rounded-lg border border-neutral-200 mx-0'} reviews={reviews[2]}/>
-          <OpinionsComponent border={'hidden lg:block w-96 h-56 rounded-lg border border-neutral-200 mx-0'} reviews={reviews[0]}/>
-        </div>
-        : counter == 2
+        testimonials.length < 1 
         ?
-        <div className="reviews-box box-carousel flex flex-row lg:justify-between justify-center">
-          <OpinionsComponent border={'w-96 h-56 bg-white rounded-lg border border-red-500 mx-0'} reviews={reviews[2]}/>
-          <OpinionsComponent border={'hidden lg:block w-96 h-56 rounded-lg border border-neutral-200 mx-0'} reviews={reviews[0]}/>
-          <OpinionsComponent border={'hidden lg:block w-96 h-56 rounded-lg border border-neutral-200 mx-0'} reviews={reviews[1]}/>
-        </div>
-        : null
+        <div>loading...</div>
+        :
+        testimonials.map((item, index) =>(
+          counter == 0 && index >= 0 && index <=2 
+          ?   
+            index == 0 
+            ?
+            <OpinionsComponent border={'w-96 h-56 bg-white rounded-lg border border-red-500 mx-0'} reviews={item}/>
+            :
+            <OpinionsComponent border={'hidden lg:block w-96 h-56 rounded-lg border border-neutral-200 mx-0'} reviews={item}/>
+          :
+          counter == 1 && index >= 1 && index <=3 
+          ?
+            index == 1
+            ?
+            <OpinionsComponent border={'w-96 h-56 bg-white rounded-lg border border-red-500 mx-0'} reviews={item}/>
+            :
+            <OpinionsComponent border={'hidden lg:block w-96 h-56 rounded-lg border border-neutral-200 mx-0'} reviews={item}/>
+          :
+          counter == 2 && index >= 2 && index <=4 
+          ?
+            index == 2 
+            ?
+            <OpinionsComponent border={'w-96 h-56 bg-white rounded-lg border border-red-500 mx-0'} reviews={item}/>
+            :
+            <OpinionsComponent border={'hidden lg:block w-96 h-56 rounded-lg border border-neutral-200 mx-0'} reviews={item}/>
+          :
+          null
+        ))
       }
+      </div>
       <div className="elements-box flex flex-row items-center justify-between">
         <div className="slider-group-box">
           {

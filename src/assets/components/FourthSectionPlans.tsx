@@ -29,7 +29,7 @@ export const FourthSectionPlans = () => {
       fetch("https://6xrb5goi1l.execute-api.us-east-1.amazonaws.com/api/subscription")
         .then((response) => {
           response.json().then((result) => {
-            const updatedSubscriptions = result.map((subscription:any) => {
+            const updatedSubscriptions = result.map((subscription: Suscription) => {
               if (subscription.title === "Free Plan") {
                 subscription.avatar = free;
               } else if (subscription.title === "Standard Plan") {

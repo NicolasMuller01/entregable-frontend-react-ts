@@ -30,7 +30,7 @@ export const PlanComponent: React.FC<SuscriptionProps> = ({plans, buttonStyle, b
         )
       }
       </div>
-      <h4 className="text-center text-slate-900 text-2xl font-medium leading-loose">{plans.currency} {plans.price}</h4>
+      <h4 className="text-center text-slate-900 text-2xl font-medium leading-loose">{plans.currency == 'U$S' ? '$' :null}{plans.price} {plans.price === 'Free' ? null : '/'} {plans.type ? plans.type.substr(0, 2) : null}</h4>
       <button className={buttonStyle}>Select</button>
     </div>
   )

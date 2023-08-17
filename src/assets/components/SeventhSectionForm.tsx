@@ -1,15 +1,20 @@
 import { useState } from 'react';
 
+type FormType = {
+  fullName: string;
+  email: string;
+  phone: string,
+  message: string;
+};
+
+
+
 export const SeventhSectionForm = () => {
-  type FormType = {
-    name: string;
-    email: string;
-    message: string;
-  };
 
   const [formData, setFormData] = useState<FormType>({
-    name: '',
+    fullName: '',
     email: '',
+    phone: '',
     message: '',
   });
 
@@ -22,15 +27,43 @@ export const SeventhSectionForm = () => {
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log(formData);
-    setFormData({
-        name: '',
+    event.preventDefault(); 
+
+    if (checkForm()){
+
+      fetch('https://6xrb5goi1l.execute-api.us-east-1.amazonaws.com/api/send-email', {
+        method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData)
+      })
+
+      setFormData({
+        fullName: '',
         email: '',
+        phone: '',
         message: '',
       })
+      
       alert('Form Sent Correctly, We will contact you soon...')
+    }else{
+      alert('Some field is wrong, please try again')
+    }
+
+
       };
+
+      const checkForm = (): boolean =>{
+        if(formData.fullName === ''){
+          return false;
+        }else if(!/\S+@\S+\.\S+/.test(formData.email)){
+          return false;
+        }else if(formData.phone === ''){
+          return false
+        }
+        return true
+      }
 
   return (
     <section>
@@ -41,10 +74,10 @@ export const SeventhSectionForm = () => {
         <form className="flex flex-col justify-center items-center" onSubmit={handleSubmit}>
           <input
             onChange={handleInputChange}
-            value={formData.name}
+            value={formData.fullName}
             className="sm:w-96 w-64 h-16 mb-5 drop-shadow-lg mx-auto"
             type="text"
-            name="name"
+            name="fullName"
             placeholder="Name"
           />
           <input
@@ -54,6 +87,14 @@ export const SeventhSectionForm = () => {
             type="email"
             name="email"
             placeholder="Email"
+          />
+           <input
+            onChange={handleInputChange}
+            value={formData.phone}
+            className="sm:w-96 w-64 h-16 mb-5 drop-shadow-lg"
+            type="tel"
+            name="phone"
+            placeholder="Phone"
           />
           <textarea
             onChange={handleInputChange}
