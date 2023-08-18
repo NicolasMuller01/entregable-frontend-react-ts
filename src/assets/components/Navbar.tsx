@@ -2,17 +2,18 @@ import logo from '../images/Logo.png';
 import "../Styles/navbar.css"
 import menu from '../images/menu-abierto.png'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
 
   const [burguerMenuValidator, setburguerMenuValidator] = useState(false)
 
   const link = [
-    {name : 'About', link: '/'},
-    {name : 'Features', link: '/'},
-    {name : 'Pricing', link: '/'},
-    {name : 'Testimonials', link: '/'},
-    {name : 'Help', link: '/'}
+    {name : 'About', link: '/about'},
+    {name : 'Features', link: '/features'},
+    {name : 'Pricing', link: '/pricing'},
+    {name : 'Testimonials', link: '/testimonials'},
+    {name : 'Help', link: '/help'}
   ];
 
   const clickVerification = () =>{
@@ -39,7 +40,7 @@ export const Navbar = () => {
             {
               link.map(( link )=>(
                 <li key={link.name} className='mx-4'>
-                <a href={link.link}>{link.name}</a>
+                <Link to={link.link}>{link.name}</Link>
                 </li>
               ))
             }
