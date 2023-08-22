@@ -20,7 +20,7 @@ const brands = [netflix, reddit, amazon, discord, spotify]
         <div className="w-full brands-box flex flex-row mt-20 justify-around">
             {
                 brands.map((link)=>(
-                    <img className='w-12 sm:w-20 md:w-32 lg:w-40 xl:w-48' src={link} alt="" />
+                    <img key={link} className='w-12 sm:w-20 md:w-32 lg:w-40 xl:w-48' src={link} alt="" />
                 ))
             }
         </div>

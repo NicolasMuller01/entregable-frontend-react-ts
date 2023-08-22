@@ -22,7 +22,7 @@ const propuses = [
                 <p className='left-side-p mt-8 lg:mt-8 md:mt-4'>You can explore the features that we provide with fun and <br></br> have their own functions each feature.</p>
                 {
                   propuses.map((p)=>(
-                    <div className='flex flex-row mt-6 lg:mt-6 md:mt-2'>
+                    <div key={p.text} className='flex flex-row mt-6 lg:mt-6 md:mt-2'>
                     <img className='pr-2' src={p.logo}></img>
                     <p>{p.text}</p>
                     </div>

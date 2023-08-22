@@ -23,7 +23,7 @@ export const PlanComponent: React.FC<SuscriptionProps> = ({plans, buttonStyle, b
       <div className="box-middle-text h-80 w-44 pb-12">
       {
         plans.benefits.map((d) =>
-          <div className="flex flex-row justify-items-start justify-start pb-5">
+          <div key={d} className="flex flex-row justify-items-start justify-start pb-5">
             <img className='w-6 h-6 relative flex-col justify-start items-start inline-flex' src={check} alt="check" />
             <p className="text-gray-600 text-sm font-normal leading-loose">{d}</p>
           </div>

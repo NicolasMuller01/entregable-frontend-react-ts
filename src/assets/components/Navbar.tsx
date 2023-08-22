@@ -40,7 +40,7 @@ export const Navbar = () => {
             {
               link.map(( link )=>(
                 <li key={link.name} className='mx-4'>
-                <Link to={link.link}>{link.name}</Link>
+                <Link target='_blank' to={link.link}>{link.name}</Link>
                 </li>
               ))
             }
