@@ -26,8 +26,8 @@ export const Navbar = () => {
     <nav className='px-10 container mx-auto max-w-7xl'>
       <div className={`${burguerMenuValidator ? "h-96" : ""} mb-20 navbar flex flex-col lg:flex lg:flex-row lg:justify-around lg:align-middle h-16 lg:items-center`}>
       {/* Left side*/}
-        <div className='flex justify-between lg:mx-auto'>
-          <div className='navbar-logo-left-box'>
+        <div className='flex justify-between'>
+          <div className='navbar-logo-left-box pr-10 xl:pr-16'>
             <img src={logo} alt="logo" />
           </div>
           <button onClick={clickVerification} className='lg:hidden'>

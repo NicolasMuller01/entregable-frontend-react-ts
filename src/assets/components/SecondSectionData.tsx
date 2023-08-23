@@ -14,28 +14,28 @@ export const SecondSectionData = () => {
 
   return (
     <section className='container mx-auto h-36 lg:h-48 flex justify-center mb-20'>
-        <div className="box-data-background shadow-xl rounded-lg mx-auto w-full flex flex-row justify-evenly place-items-center align-middle max-w-5xl">
+        <div className="box-data-background shadow-xl rounded-lg mx-auto w-full flex flex-row justify-evenly place-items-center align-middle max-w-6xl">
         {images.map((img, index) => (
           <div className="box flex flex-row align-middle items-center justify-align" key={index}>
             {index === 1 && (
               <>
-              <div className="border-l border-custom-gray h-20 lg:h-32 lg:w-20 flex-grow-0 lg:block hidden"></div>
+              <div className="border-l border-custom-gray h-20 lg:h-32 lg:w-20 flex-grow-0 lg:block hidden xl:mx-10"></div>
                 <div className="contenido flex items-center">
                   <img className="w-10 h-10 mr-1 sm:mr-4" src={img.img} alt={img.name} />
-                  <p>
-                    <b className="text-lg">{`${img.data}`} </b>
+                  <p className="text-xm sm:text-lg">
+                    <b>{`${img.data}`} </b>
                     <br></br>
                     {img.name}
                   </p>
                 </div>
-                <div className="border-r border-custom-gray h-20 lg:h-32 lg:w-28 flex-grow-0 w-0 lg:block hidden"></div>
+                <div className="border-r border-custom-gray h-20 lg:h-32 lg:w-28 flex-grow-0 w-0 lg:block xl:mx-10 hidden"></div>
               </>
             )}
             {index !== 1 && (
               <div className="contenido flex items-center">
                 <img className="w-10 h-10 mr-1 sm:mr-4" src={img.img} alt={img.name} />
-                <p>
-                  <b className="text-lg">{`${img.data}`} </b>
+                <p className="text-xm sm:text-lg">
+                  <b >{`${img.data}`} </b>
                   <br></br>
                   {img.name}
                 </p>
