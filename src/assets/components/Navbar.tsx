@@ -9,11 +9,11 @@ export const Navbar = () => {
   const [burguerMenuValidator, setburguerMenuValidator] = useState(false)
 
   const link = [
-    {name : 'About', link: '/about'},
-    {name : 'Features', link: '/features'},
-    {name : 'Pricing', link: '/pricing'},
-    {name : 'Testimonials', link: '/testimonials'},
-    {name : 'Help', link: '/help'}
+    {name : 'About', link: '#about'},
+    {name : 'Features', link: '#features'},
+    {name : 'Pricing', link: '#pricing'},
+    {name : 'Testimonials', link: '#testimonials'},
+    {name : 'Help', link: '#help'}
   ];
 
   const clickVerification = () =>{
@@ -39,8 +39,8 @@ export const Navbar = () => {
           <ul className='text-center lg:flex lg:flex-row lg:align-middle'>
             {
               link.map(( link )=>(
-                <li key={link.name} className='mx-4'>
-                <Link target='_blank' to={link.link}>{link.name}</Link>
+                <li key={link.name} className='mx-4 hover:text-red-400'>
+                  <a key={link.name} href={link.link}>{link.name}</a>
                 </li>
               ))
             }
@@ -48,8 +48,8 @@ export const Navbar = () => {
         </div>
       {/* Right side*/}
         <div className={`${burguerMenuValidator ? "" : "hidden"} navbar-right-box flex flex-col mx-auto items-center lg:flex lg:flex-row`}>
-          <button className='SignIn mb-2 lg:mb-0'>Sign In</button>
-          <button className='SignUp'>Sign Up</button>
+          <Link to="/signin"><button className='SignIn mb-2 lg:mb-0 hover:text-red-400'>Sign In</button></Link>
+          <Link to="/signup"><button className='SignUp'>Sign Up</button></Link>
         </div>
       </div>
     </nav>

@@ -12,7 +12,7 @@ const propuses = [
 ]
 
   return (
-    <section className='mb-20 max-w-5xl mx-auto container px-5'>
+    <section id='features' className='mb-20 max-w-5xl mx-auto container px-5'>
         <div className="box container mx-auto md:flex-row flex align-middle place-items-end">
             <div className="logo hidden md:block">
                 <img src={illustration2} alt='illustration2'></img>

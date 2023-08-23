@@ -17,7 +17,7 @@ interface SuscriptionProps {
 
 export const PlanComponent: React.FC<SuscriptionProps> = ({plans, buttonStyle, border}) => {
   return (
-    <div className={border} >
+    <div className={`${border} hover:scale-105 duration-500`} >
       <img className='pb-5' src={plans.avatar} alt={plans.title} />
       <h4 className="pb-5 text-center text-slate-900 text-lg font-medium leading-loos">{plans.title}</h4>
       <div className="box-middle-text h-80 w-44 pb-12">

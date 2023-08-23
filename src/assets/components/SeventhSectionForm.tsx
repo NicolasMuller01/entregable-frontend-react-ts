@@ -66,7 +66,7 @@ export const SeventhSectionForm = () => {
       }
 
   return (
-    <section>
+    <section id='help' className='pb-20'>
       <div className="text-box">
         <h3 className="text-center text-slate-900 text-4xl font-medium leading-10 mb-5">Let's Talk</h3>
       </div>

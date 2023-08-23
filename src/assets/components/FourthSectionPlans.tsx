@@ -59,7 +59,7 @@ export const FourthSectionPlans = () => {
 
 
   return (
-    <section className='section-plans mx-auto conteiner mb-20'>
+    <section id='pricing' className='section-plans mx-auto conteiner mb-20'>
       <div className="div-box-back section-plans mx-auto conteiner max-w-7xl pt-20">
           <div className="top-text flex flex-col justify-center items-center mb-16">
               <h3 className='text-center text-slate-900 text-4xl font-medium leading-10 mb-5'>Choose Your Plan</h3>
@@ -70,9 +70,16 @@ export const FourthSectionPlans = () => {
             <p>loading...</p>
             :
             <div className="plan-box flex flex-col items-center md:flex-row justify-evenly">
-              <PlanComponent plans={subcriptions[0]} buttonStyle={buttonWhite} border={defaultBorder}/>
-              <PlanComponent plans={subcriptions[1]} buttonStyle={buttonWhite} border={defaultBorder}/>
-              <PlanComponent plans={subcriptions[2]} buttonStyle={buttonRed} border={redBorder}/>
+
+              {
+              subcriptions.map((s, index) =>(
+                index != subcriptions.length-1
+                ?
+                <PlanComponent key={s.avatar} plans={s} buttonStyle={buttonWhite} border={defaultBorder}/>
+                :
+                <PlanComponent key={s.avatar} plans={subcriptions[2]} buttonStyle={buttonRed} border={redBorder}/>
+              ))
+              }
             </div>
           }
       </div>

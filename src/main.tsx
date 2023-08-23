@@ -3,11 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import {Home} from './assets/components/Home'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { FirstSection } from './assets/components/FirstSection'
-import { ThirdSectionMarketing } from './assets/components/ThirdSectionMarketing'
-import { SeventhSectionForm } from './assets/components/SeventhSectionForm'
-import { Carousel } from './assets/components/carousel/Carousel'
-import { FourthSectionPlans } from './assets/components/FourthSectionPlans'
+import { LoginForm } from './assets/components/LoginForm'
 
 const router = createBrowserRouter([
   {
@@ -15,25 +11,14 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: '/about',
-    element: <FirstSection />
+    path: "/signin",
+    element: <LoginForm />,
   },
   {
-    path: '/features',
-    element: <ThirdSectionMarketing />
+    path: "/signup",
+    element: <LoginForm/>,
   },
-  {
-    path: '/pricing',
-    element: <FourthSectionPlans />
-  },
-  {
-    path: '/testimonials',
-    element: <Carousel />
-  },
-  {
-    path: '/help',
-    element: <SeventhSectionForm />
-  },
+
 ]);
 
 
