@@ -1,7 +1,7 @@
 import logo from '../images/Logo.png';
 import "../Styles/navbar.css"
 import menu from '../images/menu-abierto.png'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
@@ -18,13 +18,21 @@ export const Navbar = () => {
 
   const clickVerification = () =>{
     burguerMenuValidator ? setburguerMenuValidator(false) : setburguerMenuValidator(true)
-    console.log(burguerMenuValidator);
-    
   }
+
+    useEffect(() => {
+      function handleResize() {
+        if (window.innerWidth > 1024) {
+          setburguerMenuValidator(false)
+        }
+      }
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
   return (
     <nav className='px-10 container mx-auto max-w-7xl'>
-      <div className={`${burguerMenuValidator ? "h-96" : ""} mb-20 navbar flex flex-col lg:flex lg:flex-row lg:justify-around lg:align-middle h-16 lg:items-center`}>
+      <div className={`${burguerMenuValidator ? "h-96" : ""} mb-16 navbar flex flex-col lg:flex lg:flex-row lg:justify-around lg:align-middle h-16 lg:items-center`}>
       {/* Left side*/}
         <div className='flex justify-between'>
           <div className='navbar-logo-left-box pr-10 xl:pr-16'>
@@ -47,7 +55,7 @@ export const Navbar = () => {
           </ul>
         </div>
       {/* Right side*/}
-        <div className={`${burguerMenuValidator ? "" : "hidden"} navbar-right-box flex flex-col mx-auto items-center lg:flex lg:flex-row`}>
+        <div className={`${burguerMenuValidator ? "" : "hidden"} navbar-right-box flex flex-col mx-auto items-center mt-5 lg:mt-0 lg:flex lg:flex-row`}>
           <Link to="/signin"><button className='SignIn mb-2 lg:mb-0 hover:text-red-400'>Sign In</button></Link>
           <Link to="/signup"><button className='SignUp'>Sign Up</button></Link>
         </div>
