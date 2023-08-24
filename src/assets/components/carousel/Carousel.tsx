@@ -43,27 +43,11 @@ export const Carousel = () => {
         <div>loading...</div>
         :
         testimonials.map((item, index) =>(
-          counter == 0 && index >= 0 && index <=2 
+          index>= counter && index <= counter + 2
           ?   
-            index == 0 
+          counter == index
             ?
-            <OpinionsComponent border={'w-96 h-56 bg-white rounded-lg border border-red-500 mx-0'} reviews={item}/>
-            :
-            <OpinionsComponent border={'hidden lg:block w-96 h-56 rounded-lg border border-neutral-200 mx-0'} reviews={item}/>
-          :
-          counter == 1 && index >= 1 && index <=3 
-          ?
-            index == 1
-            ?
-            <OpinionsComponent border={'w-96 h-56 bg-white rounded-lg border border-red-500 mx-0'} reviews={item}/>
-            :
-            <OpinionsComponent border={'hidden lg:block w-96 h-56 rounded-lg border border-neutral-200 mx-0'} reviews={item}/>
-          :
-          counter == 2 && index >= 2 && index <=4 
-          ?
-            index == 2 
-            ?
-            <OpinionsComponent border={'w-96 h-56 bg-white rounded-lg border border-red-500 mx-0'} reviews={item}/>
+              <OpinionsComponent border={'w-96 h-56 bg-white rounded-lg border border-red-500 mx-0'} reviews={item}/>
             :
             <OpinionsComponent border={'hidden lg:block w-96 h-56 rounded-lg border border-neutral-200 mx-0'} reviews={item}/>
           :
@@ -104,7 +88,7 @@ export const Carousel = () => {
           <button  className="w-14 h-14 rounded-full border border-red-500 flex items-center mr-5">
             <img onClick={()=>{counter != 0 ? setCounter(counter-1) : setCounter(2) }} className='mx-auto' src={arrowLeft} alt="arrow" />
           </button>
-          <button onClick={()=>{counter != 2 ? setCounter(counter+1) : setCounter(0)}} className="w-14 h-14 bg-red-500 rounded-full shadow border border-red-500 flex items-center">
+          <button onClick={()=>{counter != 2 ? setCounter(counter+1) : setCounter(0)}} className="w-14 h-14 bg-red-500 rounded-full shadow border border-red-500 flex items-center mr-5">
             <img className='mx-auto' src={arrowRight} alt="arrow" />
           </button>
         </div>
