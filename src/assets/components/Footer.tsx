@@ -7,10 +7,10 @@ import tw from '../images/footer/Twitter.svg'
 
 export const Footer = () => {
 
-    const [logos, setlogos] = useState([fc, tw, ig])
-    const [products, setproducts] = useState(["Download", "Pricing", "Locations", "Server", "Countries", "Blog"])
-    const [engage, setengage] = useState(["LaslesVPN ?", "FAQ", "Tutorials", "About Us", "Privacy Policy", "Terms of Service"])
-    const [earnMoney, setearnMoney] = useState(["Affiliate", "Become Partner"])
+    const [logos, _] = useState([fc, tw, ig])
+    const [products, __] = useState(["Download", "Pricing", "Locations", "Server", "Countries", "Blog"])
+    const [engage, ___] = useState(["LaslesVPN ?", "FAQ", "Tutorials", "About Us", "Privacy Policy", "Terms of Service"])
+    const [earnMoney, ____] = useState(["Affiliate", "Become Partner"])
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
