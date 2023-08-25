@@ -47,7 +47,7 @@ export const Carousel = () => {
           ?   
           counter == index
             ?
-            <OpinionsComponent border={'w-96 h-56 bg-white rounded-lg border border-red-500 mx-0 transition duration-1000 ease-in-out'} reviews={item}/>
+            <OpinionsComponent border={'w-96 h-56 bg-white rounded-lg border border-red-500 mx-0'} reviews={item}/>
             :
             <OpinionsComponent border={'hidden lg:block w-96 h-56 rounded-lg border border-neutral-200 mx-0'} reviews={item}/>
           :
@@ -60,7 +60,7 @@ export const Carousel = () => {
           {
           counter == 0 ?
           <div className="mx-auto relative">
-            <div className="w-11 h-3.5 left-[0px] top-0 absolute bg-red-500 rounded-lg transition duration-500 ease-in-out" />
+            <div className="w-11 h-3.5 left-[0px] top-0 absolute bg-red-500 rounded-lg duration-500" />
             <div className="w-3.5 h-3.5 left-[60px] top-0 absolute bg-zinc-200 rounded-full"></div>
             <div className="w-3.5 h-3.5 left-[90px] top-0 absolute bg-zinc-200 rounded-full"></div>
             <div className="w-3.5 h-3.5 left-[120px] top-0 absolute bg-zinc-200 rounded-full"></div>
@@ -69,7 +69,7 @@ export const Carousel = () => {
           ?
           <div className="mx-auto relative">
             <div className="w-3.5 h-3.5 left-[0px] top-0 absolute bg-zinc-200 rounded-full"></div>
-            <div className="w-11 h-3.5 left-[30px] top-0 absolute bg-red-500 rounded-lg duration-500 ease-in-out" />
+            <div className="w-11 h-3.5 left-[30px] top-0 absolute bg-red-500 rounded-lg duration-500" />
             <div className="w-3.5 h-3.5 left-[90px] top-0 absolute bg-zinc-200 rounded-full"></div>
             <div className="w-3.5 h-3.5 left-[120px] top-0 absolute bg-zinc-200 rounded-full"></div>
           </div>  
@@ -78,7 +78,7 @@ export const Carousel = () => {
           <div className="mx-auto relative">
             <div className="w-3.5 h-3.5 left-[0px] top-0 absolute bg-zinc-200 rounded-full"></div>
             <div className="w-3.5 h-3.5 left-[30px] top-0 absolute bg-zinc-200 rounded-full"></div>
-            <div className="w-11 h-3.5 left-[60px] top-0 absolute bg-red-500 rounded-lg duration-500 ease-in-out" />
+            <div className="w-11 h-3.5 left-[60px] top-0 absolute bg-red-500 rounded-lg duration-500 " />
             <div className="w-3.5 h-3.5 left-[120px] top-0 absolute bg-zinc-200 rounded-full"></div>
         </div> 
         : null  
