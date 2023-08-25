@@ -53,7 +53,7 @@ export const Footer = () => {
                 <p className='text-slate-900 text-sm sm:text-lg font-medium leading-loose pb-2 '><b>Product</b></p>
                 {
                     products.map((p)=>(
-                        <a href=""><p className='pt-3 text-gray-600 text-sm sm:text-lg font-normal leading-loose' key={p}>{p}</p></a>
+                        <a href=""><p className='pt-3 text-gray-600 text-sm sm:text-lg font-normal leading-loose  hover:text-gray-950' key={p}>{p}</p></a>
                     ))
                 }
             </div>
@@ -61,7 +61,7 @@ export const Footer = () => {
                 <p className='text-slate-900 text-sm sm:text-lg leading-loose pb-2'><b>Engage</b></p>
                 {
                     engage.map((e)=>(
-                        <a href=""><p className='pt-3 text-gray-600 text-sm sm:text-lg font-normal leading-loose' key={e}>{e}</p></a>
+                        <a href=""><p className='pt-3 text-gray-600 text-sm sm:text-lg font-normal leading-loose hover:text-gray-950' key={e}>{e}</p></a>
                     ))
                 }
             </div>
@@ -69,7 +69,7 @@ export const Footer = () => {
                 <p className='text-slate-900 text-sm sm:text-lg leading-loose pb-2'><b>Earn Money</b></p>
                 {
                     earnMoney.map((m)=>(
-                        <a href=""><p className='pt-3 text-gray-600 text-sm sm:text-lg font-normal leading-loose' key={m}>{m}</p></a>
+                        <a href=""><p className='pt-3 text-gray-600 text-sm sm:text-lg font-normal leading-loose  hover:text-gray-950' key={m}>{m}</p></a>
                     ))
                 }
             </div>

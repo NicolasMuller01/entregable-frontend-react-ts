@@ -18,15 +18,16 @@ const schema = yup
     phone: yup.string().
     required("Please enter your phone number")
     .min(9, "your number must have at least 9 characters").
-    max(15, "your number must have a maximum of 30 characters"),
+    max(15, "Max 30 characters for your number."),
     email: yup.string().
     required("Please enter your email").
-    email(),
+    email().
+    max(100,"Max 100 characters for your email."),
     message: yup
     .string()
     .required("Please enter your message")
     .min(10, "This message must have at least 10 characters")
-    .max(200, "this message must have a maximum of 200 characters")
+    .max(200, "Max 200 characters for your message.")
   })
   .required(); 
 
