@@ -3,6 +3,7 @@ import { FirstSection } from './FirstSection'
 import {SecondSectionData} from './SecondSectionData'
 import { ThirdSectionMarketing } from './ThirdSectionMarketing'
 import { FourthSectionPlans } from './FourthSectionPlans'
+import { Footer } from './Footer'
 
 export const Home = () => {
   return (
@@ -12,6 +13,7 @@ export const Home = () => {
         <SecondSectionData/>
         <ThirdSectionMarketing/>
         <FourthSectionPlans/>
+        <Footer/>
     </>
   )
 }
