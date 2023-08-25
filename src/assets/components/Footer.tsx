@@ -33,8 +33,8 @@ export const Footer = () => {
   
   return (
     <>
-     <section className='footer-box conteiner mx-auto max-w-7xl'>
-        <div className='general-box mx-auto flex  justify-center align-middle pt-20 sm:flex-nowrap pb-20'>     
+     <section className='footer-box conteiner mx-auto '>
+        <div className='general-box mx-auto flex  justify-center align-middle pt-20 sm:flex-nowrap pb-20 max-w-7xl'>     
 
         <div className={`social-media-box w-80 sm:mr-20 sm:pl-5 h-80 ${isMobile ? "hidden" : "block"}`} >
                 <img  className='mb-5' src={logo} alt="logo" />
