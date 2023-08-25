@@ -49,8 +49,8 @@ export const Footer = () => {
                 <p className='text-gray-400 leading-loose">©2020Lasles</span><span style="text-gray-400 text-base font-medium leading-loose'>©2020LaslesVPN</p>
             </div>   
 
-            <div className="product-box w-52 h-80">
-                <p className='text-slate-900 text-sm sm:text-lg font-medium leading-loose pb-2'><b>Product</b></p>
+            <div className="product-box w-52 h-80 pl-3 sm:pl-0">
+                <p className='text-slate-900 text-sm sm:text-lg font-medium leading-loose pb-2 '><b>Product</b></p>
                 {
                     products.map((p)=>(
                         <a href=""><p className='pt-3 text-gray-600 text-sm sm:text-lg font-normal leading-loose' key={p}>{p}</p></a>
