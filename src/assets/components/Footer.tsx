@@ -7,10 +7,19 @@ import tw from '../images/footer/Twitter.svg'
 
 export const Footer = () => {
 
-    const [logos, _] = useState([fc, tw, ig])
-    const [products, __] = useState(["Download", "Pricing", "Locations", "Server", "Countries", "Blog"])
-    const [engage, ___] = useState(["LaslesVPN ?", "FAQ", "Tutorials", "About Us", "Privacy Policy", "Terms of Service"])
-    const [earnMoney, ____] = useState(["Affiliate", "Become Partner"])
+    // eslint-disable-next-four-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const [logos, setlogos] = useState([fc, tw, ig])
+    // eslint-disable-next-four-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const [products, setproducts] = useState(["Download", "Pricing", "Locations", "Server", "Countries", "Blog"])
+    // eslint-disable-next-four-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const [engage, setengage] = useState(["LaslesVPN ?", "FAQ", "Tutorials", "About Us", "Privacy Policy", "Terms of Service"])
+    // eslint-disable-next-four-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const [earnMoney, setearnMoney] = useState(["Affiliate", "Become Partner"])
+
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
