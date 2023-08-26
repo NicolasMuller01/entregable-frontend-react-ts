@@ -2,18 +2,18 @@ import logo from '../images/Logo.svg';
 import "../Styles/navbar.css"
 import menu from '../images/menu-abierto.png'
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from "react-scroll";
 
 export const Navbar = () => {
 
   const [burguerMenuValidator, setburguerMenuValidator] = useState(false)
 
   const link = [
-    {name : 'About', link: '#about'},
-    {name : 'Features', link: '#features'},
-    {name : 'Pricing', link: '#pricing'},
-    {name : 'Testimonials', link: '#testimonials'},
-    {name : 'Help', link: '#help'}
+    {name : 'About', link: 'about'},
+    {name : 'Features', link: 'features'},
+    {name : 'Pricing', link: 'pricing'},
+    {name : 'Testimonials', link: 'testimonials'},
+    {name : 'Help', link: 'help'}
   ];
 
   const clickVerification = () =>{
@@ -47,8 +47,8 @@ export const Navbar = () => {
           <ul className='text-center lg:flex lg:flex-row lg:align-middle'>
             {
               link.map(( link )=>(
-                <li key={link.name} className='mx-4 hover:text-red-400'>
-                  <a key={link.name} href={link.link}>{link.name}</a>
+                <li key={link.name} className='mx-4 hover:text-red-400 cursor-pointer'>
+                  <Link to={link.link} smooth={true} duration={600}>{link.name}</Link>
                 </li>
               ))
             }

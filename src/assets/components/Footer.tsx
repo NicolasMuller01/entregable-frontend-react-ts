@@ -74,7 +74,7 @@ export const Footer = () => {
                 }
             </div>
         </div>
-        <div className="end-box flex w-full justify-center pl-5">
+        <div className="end-box flex w-full justify-center px-5">
         <div className={`social-media-box w-80 conteiner sm:mr-5 sm:pl-5 h-80 place-self-center ${isMobile ? "block" : "hidden"}`} >
                 <img  className='mb-5' src={logo} alt="logo" />
                 <p className='mb-10' ><b>LaslesVPN</b> is a private virtual network that has unique features and has high security.</p>
