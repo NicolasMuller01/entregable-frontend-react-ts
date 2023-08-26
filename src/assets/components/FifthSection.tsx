@@ -10,7 +10,7 @@ const brands = [netflix, reddit, amazon, discord, spotify]
 
   return (
     <section className='mx-auto conteiner my-20 max-w-7xl flex flex-col justify-center items-center'>
-        <div className="text-box my-20">
+        <div className="text-box my-20 px-10">
             <h3 className='text-center text-slate-900 text-4xl font-medium leading-10 mb-5'>Huge Global Network <br></br> of Fast VPN</h3>
             <p className='text-center text-gray-600 text-base font-normal leading-loose'>See <b>LaslesVPN</b> everywhere to make it easier for you when you move <br></br> locations.</p>
         </div>

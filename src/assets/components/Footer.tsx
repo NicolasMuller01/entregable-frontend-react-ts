@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import '../Styles/footer.css'
-import logo from '../images/Logo.png'
+import logo from '../images/Logo.svg'
 import fc from '../images/footer/Facebook.svg'
 import ig from '../images/footer/Instagram.svg'
 import tw from '../images/footer/Twitter.svg'
@@ -53,7 +53,7 @@ export const Footer = () => {
                 <p className='text-slate-900 text-sm sm:text-lg font-medium leading-loose pb-2 '><b>Product</b></p>
                 {
                     products.map((p)=>(
-                        <a href=""><p className='pt-3 text-gray-600 text-sm sm:text-lg font-normal leading-loose  hover:text-gray-950' key={p}>{p}</p></a>
+                        <a href=""><p className='pt-3 text-gray-600 text-sm sm:text-lg font-normal leading-loose hover:underline hover:text-gray-950' key={p}>{p}</p></a>
                     ))
                 }
             </div>
@@ -61,7 +61,7 @@ export const Footer = () => {
                 <p className='text-slate-900 text-sm sm:text-lg leading-loose pb-2'><b>Engage</b></p>
                 {
                     engage.map((e)=>(
-                        <a href=""><p className='pt-3 text-gray-600 text-sm sm:text-lg font-normal leading-loose hover:text-gray-950' key={e}>{e}</p></a>
+                        <a href=""><p className='pt-3 text-gray-600 text-sm sm:text-lg font-normal leading-loose hover:underline hover:text-gray-950' key={e}>{e}</p></a>
                     ))
                 }
             </div>
@@ -69,12 +69,12 @@ export const Footer = () => {
                 <p className='text-slate-900 text-sm sm:text-lg leading-loose pb-2'><b>Earn Money</b></p>
                 {
                     earnMoney.map((m)=>(
-                        <a href=""><p className='pt-3 text-gray-600 text-sm sm:text-lg font-normal leading-loose  hover:text-gray-950' key={m}>{m}</p></a>
+                        <a href=""><p className='pt-3 text-gray-600 text-sm sm:text-lg font-normal leading-loose hover:underline hover:text-gray-950' key={m}>{m}</p></a>
                     ))
                 }
             </div>
         </div>
-        <div className="end-box flex w-full justify-center">
+        <div className="end-box flex w-full justify-center pl-5">
         <div className={`social-media-box w-80 conteiner sm:mr-5 sm:pl-5 h-80 place-self-center ${isMobile ? "block" : "hidden"}`} >
                 <img  className='mb-5' src={logo} alt="logo" />
                 <p className='mb-10' ><b>LaslesVPN</b> is a private virtual network that has unique features and has high security.</p>

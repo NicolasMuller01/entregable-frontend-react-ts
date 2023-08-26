@@ -56,14 +56,13 @@ export const Carousel = () => {
       }
       </div>
       <div className="elements-box flex flex-row items-center justify-between">
-        <div className="slider-group-box">
+        <div className="slider-group-box ml-5">
           {
           counter == 0 ?
           <div className="mx-auto relative">
             <div className="w-11 h-3.5 left-[0px] top-0 absolute bg-red-500 rounded-lg duration-500" />
             <div className="w-3.5 h-3.5 left-[60px] top-0 absolute bg-zinc-200 rounded-full"></div>
             <div className="w-3.5 h-3.5 left-[90px] top-0 absolute bg-zinc-200 rounded-full"></div>
-            <div className="w-3.5 h-3.5 left-[120px] top-0 absolute bg-zinc-200 rounded-full"></div>
           </div>
           : counter == 1
           ?
@@ -71,7 +70,6 @@ export const Carousel = () => {
             <div className="w-3.5 h-3.5 left-[0px] top-0 absolute bg-zinc-200 rounded-full"></div>
             <div className="w-11 h-3.5 left-[30px] top-0 absolute bg-red-500 rounded-lg duration-500" />
             <div className="w-3.5 h-3.5 left-[90px] top-0 absolute bg-zinc-200 rounded-full"></div>
-            <div className="w-3.5 h-3.5 left-[120px] top-0 absolute bg-zinc-200 rounded-full"></div>
           </div>  
           : counter == 2
           ? 
@@ -79,7 +77,6 @@ export const Carousel = () => {
             <div className="w-3.5 h-3.5 left-[0px] top-0 absolute bg-zinc-200 rounded-full"></div>
             <div className="w-3.5 h-3.5 left-[30px] top-0 absolute bg-zinc-200 rounded-full"></div>
             <div className="w-11 h-3.5 left-[60px] top-0 absolute bg-red-500 rounded-lg duration-500 " />
-            <div className="w-3.5 h-3.5 left-[120px] top-0 absolute bg-zinc-200 rounded-full"></div>
         </div> 
         : null  
       } 
