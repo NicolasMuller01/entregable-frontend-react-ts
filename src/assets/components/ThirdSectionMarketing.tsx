@@ -17,14 +17,14 @@ const propuses = [
             <div className="logo hidden md:block">
                 <img src={illustration2} alt='illustration2'></img>
             </div>
-            <div className="text flex flex-col mx-auto justify-center">
+            <div className="text flex flex-col mx-auto justify-center md:pl-10">
                 <h3 className='text-2xl m-0 lg:text-3xl'><b>We Provide Many <br></br>Features You Can Use</b></h3>
-                <p className='left-side-p mt-8 lg:mt-8 md:mt-4'>You can explore the features that we provide with fun and <br></br> have their own functions each feature.</p>
+                <p className='left-side-p mt-8 lg:mt-8 md:mt-4 w-56 sm:w-96 text-gray-600 text-sm sm:text-base font-normal'>You can explore the features that we provide with fun and have their own functions each feature.</p>
                 {
                   propuses.map((p)=>(
                     <div key={p.text} className='flex flex-row mt-6 lg:mt-6 md:mt-2'>
                     <img className='pr-2' src={p.logo}></img>
-                    <p>{p.text}</p>
+                    <p className='text-gray-600 text-sm font-normal '>{p.text}</p>
                     </div>
                   ))
                 }

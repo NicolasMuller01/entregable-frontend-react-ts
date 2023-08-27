@@ -20,17 +20,17 @@ type Review = {
                   <img className='w-12 h-12 rounded-full object-cover' src={reviews.avatar} alt="face" />
               </div>
               <div className="middle-top-box items-start pl-3">
-                  <p><b>{reviews.fullName}</b></p>
-                  <p>Crombie</p>
+                  <p className='text-slate-900 text-lg font-medium'><b>{reviews.fullName}</b></p>
+                  <p className='text-gray-600 text-sm font-normal'>Crombie</p>
               </div>
             </div>
             <div className="right-box-top flex flex-row items-center">
-                <p className=' text-slate-900 text-base font-normal leading-loose'>4.5</p>
+                <p className=' text-slate-900 text-base font-normal'>4.5</p>
                 <img className='w-3 h-3 relative flex-col justify-start items-start inline-flex' src={star} alt="star" />
             </div>
         </div>
         <div className="bottom-bottom items-center align-middle h-fit">
-            <p>{reviews.testimonial}</p>
+            <p className='text-slate-900 text-base font-normal'>{reviews.testimonial}</p>
         </div>
 
     </div>

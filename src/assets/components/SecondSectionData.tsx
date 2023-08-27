@@ -23,7 +23,7 @@ export const SecondSectionData = () => {
                 <div className="contenido flex items-center">
                   <img className="w-10 h-10 mr-1 sm:mr-4" src={img.img} alt={img.name} />
                   <p className="text-xm sm:text-lg">
-                    <b>{`${img.data}`} </b>
+                    <b className='text-slate-900 sm:text-2xl font-bold text-sm'>{`${img.data}`} </b>
                     <br></br>
                     {img.name}
                   </p>
@@ -35,7 +35,7 @@ export const SecondSectionData = () => {
               <div className="contenido flex items-center">
                 <img className="w-10 h-10 mr-1 sm:mr-4" src={img.img} alt={img.name} />
                 <p className="text-xm sm:text-lg">
-                  <b >{`${img.data}`} </b>
+                  <b className='text-slate-900 sm:text-2xl font-bold text-sm'>{`${img.data}`} </b>
                   <br></br>
                   {img.name}
                 </p>
