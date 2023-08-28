@@ -4,6 +4,7 @@ import menu from '../images/menu-abierto.png'
 import { useEffect, useState } from 'react';
 import { Link as ScrollLink} from "react-scroll";
 import { Link as RouterLink} from 'react-router-dom'
+import ThemeManager from '../../views/theme-manager';
 
 export const Navbar = () => {
 
@@ -57,6 +58,7 @@ export const Navbar = () => {
         </div>
       {/* Right side*/}
         <div className={`${burguerMenuValidator ? "" : "hidden"} navbar-right-box flex flex-col items-center mt-5 lg:mt-0 lg:flex lg:flex-row`}>
+          <ThemeManager></ThemeManager>
           <RouterLink to="/signin"><button className='SignIn mb-2 lg:mb-0 hover:text-red-400 lg:pr-5 text-slate-900 text-base font-medium'>Sign In</button></RouterLink>
           <RouterLink to="/signup"><button className='SignUp w-36 h-11 rounded-3xl border border-rose-500 text-rose-500 text-base font-medium hover:text-red-50 hover:bg-red-500 hover:border-red-50' >Sign Up</button></RouterLink>
         </div>

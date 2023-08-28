@@ -1,4 +1,4 @@
-import React from 'react'
+import { ThemeProvider} from '../src/context/theme-context'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import {Home} from './assets/components/Home'
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+  <ThemeProvider>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </ThemeProvider>
 )
