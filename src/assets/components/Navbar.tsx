@@ -36,7 +36,7 @@ export const Navbar = () => {
     }, []);
 
   return (
-    <nav className='px-10 pt-5 container mx-auto max-w-7xl'>
+    <nav className={`px-10 pt-5 container mx-auto max-w-7xl`}>
       <div className={`${burguerMenuValidator ? "h-96" : ""} mb-16 navbar flex flex-col lg:flex lg:flex-row lg:justify-around lg:align-middle h-16 lg:items-center`}>
       {/* Left side*/}
         <div className='flex justify-between'>

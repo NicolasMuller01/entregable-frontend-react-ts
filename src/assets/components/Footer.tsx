@@ -35,9 +35,8 @@ export const Footer = () => {
   
   return (
     <>
-     <section className='footer-box conteiner mx-auto '>
+     <section className={` ${theme == 'dark' ? 'bg-gradient-to-b from-stone-900 to-transparent' : 'bg-gradient-to-b from-gray-50 to-transparent'}  footer-box conteiner mx-auto`}>
         <div className='general-box mx-auto flex  justify-center align-middle pt-20 sm:flex-nowrap pb-20 max-w-7xl'>     
-
         <div className={`social-media-box w-80 sm:mr-20 sm:pl-5 h-80 ${isMobile ? "hidden" : "block"}`} >
                  <LogoSvg fill={`${theme == 'dark' ? '#FFFFFF' : '#000000'}`}/>
                 <p className={` ${theme == 'dark' ? 'text-white' : 'text-slate-900'}  mb-10 pt-5`}><b>LaslesVPN</b> is a private virtual network that has unique features and has high security.</p>
