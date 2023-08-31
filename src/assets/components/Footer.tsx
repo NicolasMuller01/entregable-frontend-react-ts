@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
-import '../Styles/footer.css'
-import logo from '../images/Logo.svg'
 import fc from '../images/footer/Facebook.svg'
 import ig from '../images/footer/Instagram.svg'
 import tw from '../images/footer/Twitter.svg'
+import LogoSvg from './svgToComponents/LogoSvg'
+import { useTheme } from '../../context/theme-context'
 
 export const Footer = () => {
+
+    const { theme } = useTheme();
 
     // eslint-disable-next-four-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
@@ -37,8 +39,8 @@ export const Footer = () => {
         <div className='general-box mx-auto flex  justify-center align-middle pt-20 sm:flex-nowrap pb-20 max-w-7xl'>     
 
         <div className={`social-media-box w-80 sm:mr-20 sm:pl-5 h-80 ${isMobile ? "hidden" : "block"}`} >
-                <img  className='mb-5' src={logo} alt="logo" />
-                <p className='mb-10' ><b>LaslesVPN</b> is a private virtual network that has unique features and has high security.</p>
+                 <LogoSvg fill={`${theme == 'dark' ? '#FFFFFF' : '#000000'}`}/>
+                <p className={` ${theme == 'dark' ? 'text-white' : 'text-slate-900'}  mb-10 pt-5`}><b>LaslesVPN</b> is a private virtual network that has unique features and has high security.</p>
                 <div className="logos flex">
                     {
                         logos.map((logo)=>(
@@ -50,34 +52,34 @@ export const Footer = () => {
             </div>   
 
             <div className="product-box w-52 h-80 pl-3 sm:pl-0">
-                <p className='text-slate-900 text-sm sm:text-lg font-medium leading-loose pb-2 '><b>Product</b></p>
+                <p className={` ${theme == 'dark' ? 'text-white' : 'text-slate-900'}  text-sm sm:text-lg font-medium leading-loose pb-2`}><b>Product</b></p>
                 {
                     products.map((p)=>(
-                        <a href=""><p className='pt-3 text-gray-600 text-sm sm:text-lg font-normal leading-loose hover:underline hover:text-gray-950' key={p}>{p}</p></a>
+                        <a href=""><p className={`${theme == 'dark' ? 'text-gray-200 hover:text-gray-50' : 'text-gray-600 hover:text-gray-950'} pt-3 text-sm sm:text-lg font-normal leading-loose hover:underline hover:text-gray-950`}key={p}>{p}</p></a>
                     ))
                 }
             </div>
             <div className="engage-box w-52 h-80">
-                <p className='text-slate-900 text-sm sm:text-lg leading-loose pb-2'><b>Engage</b></p>
+                <p className={` ${theme == 'dark' ? 'text-white' : 'text-slate-900'}  text-sm sm:text-lg font-medium leading-loose pb-2`}><b>Engage</b></p>
                 {
                     engage.map((e)=>(
-                        <a href=""><p className='pt-3 text-gray-600 text-sm sm:text-lg font-normal leading-loose hover:underline hover:text-gray-950' key={e}>{e}</p></a>
+                        <a href=""><p className={`${theme == 'dark' ? 'text-gray-200 hover:text-gray-50' : 'text-gray-600 hover:text-gray-950'} pt-3 text-sm sm:text-lg font-normal leading-loose hover:underline hover:text-gray-950`} key={e}>{e}</p></a>
                     ))
                 }
             </div>
             <div className="earn-money-box w-52 h-80">
-                <p className='text-slate-900 text-sm sm:text-lg leading-loose pb-2'><b>Earn Money</b></p>
+                <p className={` ${theme == 'dark' ? 'text-white' : 'text-slate-900'}  text-sm sm:text-lg font-medium leading-loose pb-2`}><b>Earn Money</b></p>
                 {
                     earnMoney.map((m)=>(
-                        <a href=""><p className='pt-3 text-gray-600 text-sm sm:text-lg font-normal leading-loose hover:underline hover:text-gray-950' key={m}>{m}</p></a>
+                        <a href=""><p className={`${theme == 'dark' ? 'text-gray-200 hover:text-gray-50' : 'text-gray-600 hover:text-gray-950'} pt-3 text-sm sm:text-lg font-normal leading-loose hover:underline hover:text-gray-950`}key={m}>{m}</p></a>
                     ))
                 }
             </div>
         </div>
         <div className="end-box flex w-full justify-center px-5">
         <div className={`social-media-box w-80 conteiner sm:mr-5 sm:pl-5 h-80 place-self-center ${isMobile ? "block" : "hidden"}`} >
-                <img  className='mb-5' src={logo} alt="logo" />
-                <p className='mb-10' ><b>LaslesVPN</b> is a private virtual network that has unique features and has high security.</p>
+                <LogoSvg fill={`${theme == 'dark' ? '#FFFFFF' : '#000000'}`}/>
+                <p className={` ${theme == 'dark' ? 'text-white' : 'text-slate-900'}  mb-10 pt-5`} ><b>LaslesVPN</b> is a private virtual network that has unique features and has high security.</p>
                 <div className="logos flex">
                     {
                         logos.map((logo)=>(

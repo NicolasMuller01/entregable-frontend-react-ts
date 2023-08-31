@@ -1,8 +1,11 @@
 import user from '../images/user.png'
 import locations from '../images/location.png'
 import server from '../images/Server.png'
+import { useTheme } from '../../context/theme-context';
 
 export const SecondSectionData = () => {
+
+    const { theme } = useTheme();
 
     const images = [
         {name : 'Users', img: user, data:'90+'},
@@ -14,7 +17,7 @@ export const SecondSectionData = () => {
 
   return (
     <section className='container mx-auto h-36 lg:h-48 flex justify-center mb-20 xl:px-10 2xl:px-40'>
-        <div className="box-data-background shadow-xl rounded-lg mx-auto w-full flex flex-row justify-evenly place-items-center align-middle max-w-7xl">
+        <div className={` ${theme == 'dark' ? 'bg-stone-800' : 'bg-white'} box-data-background shadow-xl rounded-lg mx-auto w-full flex flex-row justify-evenly place-items-center align-middle max-w-7xl`}>
         {images.map((img, index) => (
           <div className="box flex flex-row align-middle items-center justify-align" key={index}>
             {index === 1 && (
@@ -22,8 +25,8 @@ export const SecondSectionData = () => {
               <div className="border-l border-custom-gray h-20 lg:h-32 lg:w-20 flex-grow-0 lg:block hidden xl:mx-10"></div>
                 <div className="contenido flex items-center">
                   <img className="w-10 h-10 mr-1 sm:mr-4" src={img.img} alt={img.name} />
-                  <p className="text-xm sm:text-lg">
-                    <b className='text-slate-900 sm:text-2xl font-bold text-sm'>{`${img.data}`} </b>
+                  <p className={` ${theme == 'dark' ? 'text-white' : 'text-slate-800'} text-xm sm:text-lg`}>
+                    <b className={` ${theme == 'dark' ? 'text-white' : 'text-slate-800'} text-slate-900 sm:text-2xl font-bold text-sm`}>{`${img.data}`} </b>
                     <br></br>
                     {img.name}
                   </p>
@@ -34,8 +37,8 @@ export const SecondSectionData = () => {
             {index !== 1 && (
               <div className="contenido flex items-center">
                 <img className="w-10 h-10 mr-1 sm:mr-4" src={img.img} alt={img.name} />
-                <p className="text-xm sm:text-lg">
-                  <b className='text-slate-900 sm:text-2xl font-bold text-sm'>{`${img.data}`} </b>
+                <p className={` ${theme == 'dark' ? 'text-white' : 'text-slate-800'} text-xm sm:text-lg`}>
+                  <b className={` ${theme == 'dark' ? 'text-white' : 'text-slate-800'} text-slate-900 sm:text-2xl font-bold text-sm`}>{`${img.data}`} </b>
                   <br></br>
                   {img.name}
                 </p>

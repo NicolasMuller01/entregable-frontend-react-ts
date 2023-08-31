@@ -11,7 +11,7 @@ export const Home = () => {
   const { theme } = useTheme();
 
   return (
-      <div className={`${theme == 'dark' ? "bg-black" : "bg-white"}`}>
+      <div className={`${theme == 'dark' ? "bg-stone-800" : "bg-white"}`}>
         <Navbar />
         <FirstSection />
         <SecondSectionData/>

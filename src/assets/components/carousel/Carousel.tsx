@@ -2,6 +2,7 @@ import { OpinionsComponent } from "./OpinionsComponent"
 import arrowRight from '../../images/svg/arrow-right.svg'
 import arrowLeft from '../../images/svg/arrow-left.svg'
 import { useEffect, useState } from "react"
+import { useTheme } from "../../../context/theme-context"
 
 type Testimonials = {
   avatar: string,
@@ -11,6 +12,8 @@ type Testimonials = {
 
 
 export const Carousel = () => {
+
+  const { theme } = useTheme();
 
   const [counter, setCounter] = useState(0)
 
@@ -28,9 +31,6 @@ export const Carousel = () => {
         .catch((error) => {
           console.log(error.message);
         })
-        .finally(() => {
-          console.log(testimonials);  
-        });
     }, []);
 
 
@@ -47,9 +47,9 @@ export const Carousel = () => {
           ?   
           counter == index
             ?
-            <OpinionsComponent border={'w-96 h-56 bg-white rounded-lg border border-red-500 mx-0'} reviews={item}/>
+            <OpinionsComponent border={`w-96 h-56 rounded-lg border border-red-500 mx-0`} reviews={item}/>
             :
-            <OpinionsComponent border={'hidden lg:block w-96 h-56 rounded-lg border border-neutral-200 mx-0'} reviews={item}/>
+            <OpinionsComponent border={`${theme == 'dark' ? 'bg-stone-800 border border-neutral-600' : 'bg-white border border-neutral-200'} hidden xl:block w-96 h-56 rounded-lg mx-0`} reviews={item}/>
           :
           null
         ))

@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
+import { useTheme } from "../../context/theme-context";
 
 type FormType = {
   fullName: string;
@@ -33,6 +34,8 @@ const schema = yup
 
 export const SeventhSectionForm = () => {
 
+  const { theme } = useTheme();
+
   const {
     register,
     handleSubmit,
@@ -56,7 +59,7 @@ export const SeventhSectionForm = () => {
   return (
     <section id='help' className='pb-20'>
       <div className="text-box">
-        <h3 className="text-center text-slate-900 text-4xl font-medium leading-10 mb-5">Let's Talk</h3>
+        <h3 className={` ${theme == 'dark' ? 'text-white' : 'text-slate-900'} text-center text-4xl font-medium leading-10 mb-5`}>Let's Talk</h3>
       </div>
       <div className="form-box flex justify-center flex-col items-center align-middle">
 

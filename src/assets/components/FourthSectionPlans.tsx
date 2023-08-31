@@ -1,4 +1,3 @@
-import '../Styles/fourthSectionPlans.css'
 import { PlanComponent } from './PlanComponent'
 import free from "../images/Free.png"
 import standard from "../images/Standard.png"
@@ -7,6 +6,7 @@ import { FifthSection } from './FifthSection'
 import { SixthSectionCarousel } from './SixthSectionCarousel'
 import { SeventhSectionForm } from './SeventhSectionForm'
 import { useEffect, useState } from 'react'
+import { useTheme } from '../../context/theme-context'
 
 export {free, standard, premium}
 
@@ -21,9 +21,9 @@ type Suscription = {
 
 export const FourthSectionPlans = () => {
 
+    const { theme } = useTheme();
+
     const [subcriptions, setSubcriptions] = useState<Suscription[]>([]);
-
-
 
     useEffect(() => {
       fetch("https://6xrb5goi1l.execute-api.us-east-1.amazonaws.com/api/subscription")
@@ -49,21 +49,19 @@ export const FourthSectionPlans = () => {
         });
     }, []);
 
-  
-   
     
     const buttonRed= 'w-44 h-11 bg-red-500 rounded-3xl text-white text-base font-bold drop-shadow-xl'
     const buttonWhite= 'w-44 h-11 rounded-3xl border border-red-500 text-red-500 text-base font-bold' 
-    const defaultBorder='max-w-xs w-80 py-16 bg-white rounded-lg border border-neutral-200 flex flex-col justify-center items-center mt-10'
-    const redBorder=  'max-w-xs w-80 py-16 bg-white rounded-lg border border-red-500 flex flex-col justify-center items-center mt-10'
+    const defaultBorder=`${theme == 'dark' ? 'border-neutral-700 bg-stone-800' : 'border-neutral-200 bg-white'} max-w-xs w-80 py-16 rounded-lg border flex flex-col justify-center items-center mt-10`
+    const redBorder=  `${theme == 'dark' ? 'bg-stone-800' : 'bg-white'} max-w-xs w-80 py-16 rounded-lg border border-red-500 flex flex-col justify-center items-center mt-10`
 
 
   return (
-    <section id='pricing' className='section-plans mx-auto conteiner mb-20'>
+    <section id='pricing' className={` ${theme == 'dark' ? 'bg-gradient-to-b from-stone-900 to-transparent' : 'bg-gradient-to-b from-gray-50 to-transparent'} section-plans mx-auto conteiner mb-20`}>
       <div className="div-box-back section-plans mx-auto conteiner max-w-7xl pt-20 ">
           <div className="top-text flex flex-col justify-center items-center mb-16 px-10">
-              <h3 className='text-center text-slate-900 text-4xl font-medium leading-10 mb-5'>Choose Your Plan</h3>
-              <p className='text-center text-gray-600 text-base font-normal leading-loose'>Let's choose the package that is best for you and explore it happily and <br /> cheerfully.</p>
+              <h3 className={` ${theme == 'dark' ? 'text-white' : 'text-slate-900'} text-center text-4xl font-medium leading-10 mb-5`}>Choose Your Plan</h3>
+              <p className={`${theme == 'dark' ? 'text-gray-200' : 'text-gray-600'} text-center text-base font-normal leading-loose`}>Let's choose the package that is best for you and explore it happily and <br /> cheerfully.</p>
           </div>
           {
             subcriptions.length<=0 ?
